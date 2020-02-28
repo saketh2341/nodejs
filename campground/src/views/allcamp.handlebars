@@ -1,0 +1,27 @@
+
+<a href="/campground/new">add campground</a>
+
+{{#if campgrounds}}
+
+<div class="container">
+
+
+<ul>
+    
+    {{#each campgrounds}}
+         <div class="card" style="width: 18rem;">
+             <img id="image" width="300px" hieght="300px" src="{{this.image}}" alt="">
+             <div class="card-body">
+                 <h1>{{this.campground}}</h1>
+                 <a href="/campgrounds/{{this.insertId}}" class="btn btn-primary">more info</a>
+             </div>
+          </div>
+         
+      
+    {{/each}}
+</ul>
+</div>
+{{else}}
+    <p><em>There are currently no polls.</em></p>
+{{/if}}
+
